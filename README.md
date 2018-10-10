@@ -195,7 +195,7 @@ In this step, we'll create the `exchangeCodeForAccessToken` function. We'll crea
   * `client_id` (use value from `.env` REACT_APP_AUTH0_CLIENT_ID)
   * `client_secret` (use value from `.env` AUTH0_CLIENT_SECRET)
   * `code` (the `code` we expect to recieve from Auth0 attached to `req.query` when our `/callback` endpoint is hit)
-  * `grant_type` (which should be `authorization_code`)
+  * `grant_type` (which should be `'authorization_code'`)
   * `redirect_uri` which should redirect back to `http://${req.headers.host}/callback`
     * (note: it's "uri", not "url")
     * (help: `req.headers.host` is a way to say "use whatever domain and port I'm already using", which means that we won't need to change the code even if we change our domain or port).
